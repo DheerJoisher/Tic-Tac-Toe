@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-[#052F5F] text-center">
-    <h1 class="text-9xl text-[#F1A208]">Tic Tac Toe</h1>
-    <div class="mt-20 container h-[70vh]">
-      <div id="game" class="h-[60vmin] w-[60vmin] space-x-3 space-y-3">
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          1
-        </button>
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          2
-        </button>
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          3
-        </button>
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          4
-        </button>
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          5
-        </button>
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          6
-        </button>
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          7
-        </button>
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          7
-        </button>
-        <button class="bg-[#D5C67A] h-[18vmin] w-[18vmin] rounded-2xl">
-          7
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#052F5F] text-center">
+  <main>
+    <div class="flex-col h-screen p-72 align-middle items-center" id="msgbox" style="display: none;">
+      <h1 id="win-text" class="text-[#F1A208] text-3xl font-semibold mb-5"></h1>
+      <button id="new" class="bg-[#F1A208] hover:bg-yellow-600 rounded-md p-2">
+        New Game
+      </button>
+    </div>
+    <h1 class="text-8xl text-[#F1A208]">Tic Tac Toe</h1>
+    <div class="mt-14 h-96 flex justify-center items-center">
+      <div id="game" class="flex flex-wrap justify-center items-center h-[70vmin] w-[70vmin] gap-4 text-[#06A77D] font-extrabold text-8xl">
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
+        <button class="box bg-[#D5C67A] hover:bg-yellow-200 h-32 w-32 rounded-xl shadow-2xl"></button>
       </div>
     </div>
-    <script src="App.js"></script>
-  </body>
+    <div class="mt-12 space-x-2">
+      <button id="reset" class="bg-[#F1A208] hover:bg-yellow-600 rounded-md p-2">
+        Reset Game
+      </button>
+    </div>
+  </main>
+  <script src="App.js"></script>
+</body>
 </html>
