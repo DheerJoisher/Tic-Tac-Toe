@@ -41,7 +41,10 @@ const checkWinner = () => {
       boxes[pattern[1]].innerHTML === boxes[pattern[2]].innerHTML &&
       boxes[pattern[0]].innerHTML !== ""
     ) {
-      winner = boxes[pattern[0]].innerHTML;
+      winner = `${boxes[pattern[0]].innerHTML} wins!`;
+    }
+    else if (winner === null && [...boxes].every(box => box.innerHTML !== "")) {
+      winner = "It's a tie!";
     }
   });
   return winner;
@@ -50,7 +53,7 @@ const checkWinner = () => {
 const showWinner = (winner) => {
   if (winner) {
     msg_container.style.display = 'flex'; // Show the message container
-    winnermsg.innerHTML = `${winner} wins!`;
+    winnermsg.innerHTML = `${winner}`;
     disableBox();
   }
 };
